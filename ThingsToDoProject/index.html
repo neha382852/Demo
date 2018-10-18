@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+<p id="demo"></p>
+<a href="#" id="btn">ThingsToDo</a>
+
+<script>
+var myObj = {"layovercity":"Delhi", "layover_time":"7hours"};
+
+    document.getElementById("demo").innerHTML +=  myObj.layovercity + "<br>";
+    document.getElementById("demo").innerHTML += myObj.layover_time+ "<br>";
+    
+    window.addEventListener("load", function() {
+        
+        document.getElementById("btn").addEventListener("click", function() {
+          
+            document.location.href = "http://localhost:63661/Home?location="+myObj.layovercity+"&time="+myObj.layover_time;
+        });
+    });
+</script>
+</body>
+</html>
