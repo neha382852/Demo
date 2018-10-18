@@ -1,0 +1,26 @@
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.vertical-divider {
+  padding-right: 10px;
+  border-top-width: 0;
+  border-right-width: 1px;
+  border-right-style: solid;
+  height: 50%;
+}
+
+/* Highlighting rules for nav menu items */
+a.link-active,
+a.link-active a:hover,
+a.link-active a:focus {
+    background-color: #4189C7;
+    color: white;
+}
+.space{
+  padding-right: 10px;
+}

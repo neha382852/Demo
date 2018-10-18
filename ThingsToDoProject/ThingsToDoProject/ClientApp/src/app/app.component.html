@@ -1,0 +1,75 @@
+<div>
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+                    <mat-icon>menu</mat-icon>
+                </button>
+    
+                <span>Let's Explore</span>
+                <mat-icon>flight_land</mat-icon>
+                <span class="example-spacer"></span>
+                            <span layout="row"><hr flex/>PNQ - DEL - IXC <hr flex/></span>
+                <span class="example-spacer"></span>
+                <div fxShow="true" fxHide.lt-md="true">
+                    <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+                    <a href="#" mat-button>
+                        <mat-icon>notifications</mat-icon>
+                        Reminders
+                    </a>
+                    <a href="#" mat-button>
+                        <mat-icon>account_box</mat-icon>
+                        My Account
+                    </a>
+                </div>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <mat-sidenav-container fxFlexFill>
+            <mat-sidenav #sidenav>
+                <mat-nav-list>
+                    <a (click)="sidenav.toggle()" [routerLink]='["/Home"]' [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }' mat-list-item>
+                        <mat-icon>home</mat-icon> Home
+                    </a>
+                    <a (click)="sidenav.toggle()" (click)="Category()"[routerLink]='["/Restaurant"]' [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }' mat-list-item>
+                        <mat-icon>store</mat-icon> Restaurant
+                    </a>
+                    <a (click)="sidenav.toggle()" [routerLink]='["/Store"]' [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }' mat-list-item>
+                        <mat-icon>store</mat-icon> Store
+                    </a>
+                    <button (click)="sidenav.toggle()" mat-raised-button mat-list-item>
+                        <mat-icon>notifications</mat-icon>Set Reminder
+                    </button>
+                    <a (click)="sidenav.toggle()" mat-list-item>
+                        <mat-icon>close</mat-icon> Close
+                    </a>
+                </mat-nav-list>
+            </mat-sidenav>
+            <mat-sidenav-content fxFlexFill>
+                <div fxShow="true" fxHide.lt-md="true">
+                    <mat-toolbar>
+                        <mat-toolbar-row>
+                            <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+                            <a [routerLink]='["/Home"]' [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }' queryParamsHandling="preserve" mat-button>
+                                <mat-icon>home</mat-icon> Home
+                            </a>
+                            <mat-divider class="vertical-divider"></mat-divider>
+                            <div class="space"></div>
+                            <a [routerLink]='["/Restaurant"]' [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }' queryParamsHandling="preserve" mat-button>
+                                <mat-icon>store</mat-icon> Restaurant
+                            </a>
+                            <a [routerLink]='["/Store"]' [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }' mat-button>
+                                <mat-icon>store</mat-icon> Store
+                            </a>
+                            <span class="example-spacer"></span>
+                            <button mat-raised-button>
+                                <mat-icon>notifications</mat-icon>Set Reminder
+                            </button>
+                        </mat-toolbar-row>
+                    </mat-toolbar>
+                </div>
+    
+                <router-outlet></router-outlet>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+    
+    

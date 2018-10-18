@@ -1,0 +1,15 @@
+.menu-spacer {
+    flex: 1 1 auto;
+  }
+/* Highlighting rules for nav menu items */
+a.link-active,
+a.link-active a:hover,
+a.link-active a:focus {
+    background-color: #4189C7;
+    color: white;
+}  
+@media (min-width: 768px) {
+.navbar{
+    height: 80vh;
+}
+}
